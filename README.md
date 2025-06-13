@@ -32,3 +32,7 @@ Afin de corrige le problème, la fonction a été modifée comme ceci :
         yield driver
         driver.quit()
 ```
+
+![img.png](img.png)
+![img.png](assets/img.png)
+
