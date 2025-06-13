@@ -28,11 +28,12 @@ class TestCalculator:
             chrome_options.add_argument('--disable-gpu')
             chrome_options.add_argument('--window-size=1920,1080')
 
-        chrome_install = ChromeDriverManager().install()
-        folder = os.path.dirname(chrome_install)
-        chromedriver_path = os.path.join(folder, "chromedriver.exe")
-        service = webdriver.ChromeService(chromedriver_path)
+        # chrome_install = ChromeDriverManager().install()
+        # folder = os.path.dirname(chrome_install)
+        # chromedriver_path = os.path.join(folder, "chromedriver.exe")
+        # service = webdriver.ChromeService(chromedriver_path)
 
+        service = Service(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service, options=chrome_options)
         driver.implicitly_wait(10)
 
